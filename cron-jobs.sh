@@ -29,6 +29,9 @@ call_api() {
 }
 
 case "$1" in
+  daily-opening)
+    call_api "/api/cron/daily-opening"
+    ;;
   pending-reminder)
     call_api "/api/cron/pending-approval-reminder"
     ;;
@@ -42,7 +45,7 @@ case "$1" in
     call_api "/api/cron/whatsapp-reminders"
     ;;
   *)
-    echo "Usage: $0 {pending-reminder|daily-closing|daily-summary|whatsapp-reminders}"
+    echo "Usage: $0 {daily-opening|pending-reminder|daily-closing|daily-summary|whatsapp-reminders}"
     exit 1
     ;;
 esac
