@@ -44,8 +44,11 @@ case "$1" in
   whatsapp-reminders)
     call_api "/api/cron/whatsapp-reminders"
     ;;
+  low-inventory-alert)
+    call_api "/api/cron/low-inventory-alert"
+    ;;
   *)
-    echo "Usage: $0 {daily-opening|pending-reminder|daily-closing|daily-summary|whatsapp-reminders}"
+    echo "Usage: $0 {daily-opening|pending-reminder|daily-closing|daily-summary|whatsapp-reminders|low-inventory-alert}"
     exit 1
     ;;
 esac

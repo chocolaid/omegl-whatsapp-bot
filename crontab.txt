@@ -13,5 +13,8 @@
 # Daily summary - 12:00 AM Nigerian time (23:00 UTC)
 0 23 * * * /home/ubuntu/whatsapp-bot/cron-jobs.sh daily-summary >> /home/ubuntu/whatsapp-bot/logs/cron.log 2>&1
 
+# Low inventory alert - every 2 hours during work hours (8 AM - 6 PM Nigerian = 7-17 UTC)
+0 7,9,11,13,15,17 * * * /home/ubuntu/whatsapp-bot/cron-jobs.sh low-inventory-alert >> /home/ubuntu/whatsapp-bot/logs/cron.log 2>&1
+
 # Backup every 30 minutes
 */30 * * * * /home/ubuntu/backup/backup.sh >> /home/ubuntu/backups/backup.log 2>&1
