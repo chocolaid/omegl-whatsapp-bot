@@ -14,8 +14,9 @@ logs/
 *.log
 npm-debug.log*
 
-# Auth state (WhatsApp session)
-auth_info_baileys/
+# Auth state (WhatsApp session - whatsapp-web.js)
+.wwebjs_auth/
+.wwebjs_cache/
 
 # OS files
 .DS_Store
